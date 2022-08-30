@@ -1,3 +1,26 @@
+:root{
+  /* Light-Theme */
+  --first-color: #f0efff;
+  --second-color: #f0efff;
+  --third-color: #fff;
+  --fourth-color: #fff;
+  --fifth-color: #fff;
+  --sixth-color:#d8d7e6;
+  --seven-color: #3e4c5a;
+  --eight-color: #fff;
+  
+}
+.dark-theme{
+  /* Dark-Theme */
+  --first-color: #151e27;
+  --second-color: #17222c;
+  --third-color: #1c2935;
+  --fourth-color: #19242f;
+  --fifth-color: #121b23;
+  --sixth-color: #151f28; 
+  --seven-color: #fff;
+  --eight-color: #3e4c5a;
+}
 html {
   box-sizing: border-box;
   height: 100%;
@@ -10,13 +33,13 @@ html {
 }
 
 body{
-  background: #151e27;
+  background: var(--first-color);
 }
 .container{
-  background-color: #17222c;
+  background-color: var(--second-color);
   border-radius: 50px;
-  border:  #151f29 solid 20px;
-  box-shadow: inset 8px 8px 8px #121b23, inset -8px -8px 8px #1c2935;
+  border:  var(--first-color) solid 20px;
+  box-shadow: inset 8px 8px 8px var(--fifth-color), inset -8px -8px 8px var(--third-color);
   margin-left: 5%;
   margin-top: 5%;
   width: 90%;
@@ -25,6 +48,7 @@ body{
 /* --------------------------------------------------
    --------3D On-Off-Switch
    -------------------------------------------------- */
+
 .on-off-Switch {
   display: flex;
   position: inherit;
@@ -32,7 +56,7 @@ body{
   width: 30%;
   height: 40vh;
   --on: #ae0bcf;
-  --off: #3e4c5a;
+  --off: var(--eight-color);
   --transDur: 0.6s;
 }
 input {
@@ -78,7 +102,7 @@ input {
   background: linear-gradient(0deg,#fff 33%,#ccc 45%);
   border-radius: 4.75em;
   /* box-shadow: 0 0 0.2em 0.3em #f0f0f0 inset; */
-  box-shadow: inset 8px 8px 8px #121b23, inset -8px -8px 8px #1c2935;
+  box-shadow: inset 8px 8px 8px var(--fifth-color), inset -8px -8px 8px var(--third-color);
   width: 16.5em;
   height: 9.5em;
 }
@@ -93,7 +117,7 @@ input {
     0 0 0.1em 0.1em #ddd inset,
     0 1.5em 1.5em 1em #0004 inset,
     0 0 0 4.25em #0002 inset; */
-    box-shadow: inset 8px 8px 8px #121b23, inset -8px -8px 8px #1c2935;
+    box-shadow: inset 8px 8px 8px var(--on), inset -8px -8px 8px var(-off);
   width: 15.5em;
   height: 8.5em;
   transition: background-position var(--transDur) ease-in-out;
@@ -179,17 +203,17 @@ input:checked + .toy-toggle .handle-on {
   
 }
 .display{
-  background: #151f29;
+  /* background: #f0efff; */
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  color: #fff;
+  color: var(--seven-color);
   font-size: 5rem;
   font-weight: bold;
   text-align: center;
   padding-top: 0.7em; 
-  background: linear-gradient(145deg, #151f28, #19242f);
-  box-shadow: 10px 10px 20px #121b23, -10px -10px 20px #1c2935;
+  background: linear-gradient(145deg, var(--sixth-color), var(--fourth-color));
+  box-shadow: 10px 10px 20px var(--fifth-color), -10px -10px 20px var(--third-color);
   
 }
 /* ----------------------X--------------------------- */
@@ -199,12 +223,13 @@ input:checked + .toy-toggle .handle-on {
    --------Pattern Buttons
    -------------------------------------------------- */
 button{
-  background: #151f29;
-  color: #fff;
+  background: var(--first-color);
+  color: var(--seven-color);
   width: 120px;
   height: 50px;
+  font-weight: bold;
   border-radius: 50%;
-  box-shadow: inset 8px 8px 8px #121b23, inset -8px -8px 8px #1c2935;  
+  box-shadow: inset 8px 8px 8px var(--fifth-color), inset -8px -8px 8px var(--third-color);  
 }
 
 button.b1{
